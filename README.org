@@ -127,7 +127,7 @@ just enable/disable via =M-x= =shrface-mode= on the fly.
 *** helpful mode
 #+BEGIN_SRC emacs-lisp
 (with-eval-after-load 'helpful
-  (add-hook 'helpful-mode-hook 'shrface-plus) ; apply the shrfaces to info mode buffers
+  (add-hook 'helpful-mode-hook 'shrface-plus) ; apply the shrfaces to helpful mode buffers
   (add-hook 'helpful-mode-hook 'shrface-mode)) ; enable imenu, outline, org-indent support.
 #+END_SRC
 
@@ -136,6 +136,6 @@ Only one level is supported:
 #+BEGIN_SRC emacs-lisp
 (with-eval-after-load 'w3m
   (add-hook 'w3m-fontify-before-hook shrface-plus-w3m-headline-fontify) ; fontify w3m headline before applying shrfaces
-  (add-hook 'w3m-fontify-after-hook 'shrface-plus) ; apply the shrfaces to info mode buffers
+  (add-hook 'w3m-fontify-after-hook 'shrface-plus) ; apply the shrfaces to w3m mode buffers
   (add-hook 'w3m-fontify-after-hook 'shrface-mode)) ; enable imenu, outline, org-indent support.
 #+END_SRC
