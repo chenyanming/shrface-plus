@@ -54,7 +54,7 @@
   (format "%s\n" (propertize (concat "◉ " text) 'face 'shrface-h2-face)))
 
 (defun shrface-plus-info-mode-fontify ()
-  "Fontify info mode bufffer"
+  "Fontify info mode bufffer."
   ;; (face-remap-add-relative 'info-title-1 '(:height nil))
   ;; (face-remap-add-relative 'info-menu-header 'org-title)
   (face-remap-add-relative 'info-title-1 'shrface-h1-face)
@@ -66,19 +66,19 @@
   (face-remap-add-relative 'Info-quoted 'shrface-verbatim))
 
 (defun shrface-plus-helpful-mode-fontify ()
-  "Fontify helpful mode bufffer"
+  "Fontify helpful mode bufffer."
   ;; (face-remap-add-relative 'helpful-heading 'org-level-2)
   (advice-add 'helpful--heading :override 'shrface-plus-helpful-heading))
 
 (defun shrface-plus-w3m-mode-fontify ()
-  "Fontify w3m mode bufffer"
+  "Fontify w3m mode bufffer."
   (face-remap-add-relative 'w3m-header-line-title 'shrface-h1-face)
   (face-remap-add-relative 'w3m-anchor 'shrface-href-face)
   ;; (face-remap-add-relative 'w3m-current-anchor 'link)
   )
 
 (defun shrface-plus ()
-  "Fontify all supported major mode"
+  "Fontify all supported major mode."
   (interactive)
   (cond ((eq major-mode 'w3m-mode)
          (shrface-plus-w3m-mode-fontify))
@@ -88,5 +88,7 @@
          (shrface-plus-helpful-mode-fontify))))
 
 ;; (add-hook 'shrface-mode-hook #'shrface-plus)
+
 (provide 'shrface-plus)
-;;; shrface-plus.el ends here;;;
+
+;;; shrface-plus.el ends here
