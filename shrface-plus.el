@@ -1,4 +1,4 @@
-;;; shrface+.el -- "shrface+": extensions to library `shrface.el' -*- lexical-binding: t; -*-
+;;; shrface-plus.el -- "shrface-plus": extensions to library `shrface.el' -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2020 Damon Chan
 
@@ -24,7 +24,7 @@
 
 ;;; Commentary:
 ;;
-;; shrface+: extensions to library `shrface.el'
+;; shrface-plus: extensions to library `shrface.el'
 ;; Apply org faces to non-org buffers
 ;
 ;; The following major modes are supported:
@@ -89,4 +89,4 @@
 
 ;; (add-hook 'shrface-mode-hook #'shrface-plus)
 (provide 'shrface-plus)
-;;; shrface+.el ends here;;;
+;;; shrface-plus.el ends here;;;
