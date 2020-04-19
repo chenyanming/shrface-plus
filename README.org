@@ -1,4 +1,4 @@
-#+TITLE:   SHRFACE+
+#+TITLE:   SHRFACE-PLUS
 #+DATE:    April 19, 2020
 #+SINCE:   {replace with next tagged release version}
 #+STARTUP: inlineimages nofold
@@ -12,19 +12,19 @@
 - [[#prerequisites][Prerequisites]]
 - [[#before-the-installation][Before the installation]]
 - [[#installation][Installation]]
-  - [[#install-shrfaceel][Install shrface+.el]]
+  - [[#install-shrface-plusel][Install shrface-plus.el]]
     - [[#ues-package][ues-package]]
     - [[#doom-emacs][Doom Emacs]]
     - [[#spacemacs-or-other-emacs-distributions][Spacemacs or other emacs distributions]]
 - [[#configuration][Configuration]]
-  - [[#enable-shrfaceel][Enable shrface+.el]]
+  - [[#enable-shrface-plusel][Enable shrface-plus.el]]
   - [[#settings-for-different-major-modes][Settings for different major modes]]
     - [[#info-mode][Info mode]]
     - [[#helpful-mode][helpful mode]]
     - [[#w3m-mode][w3m mode]]
 
 * Description
-=shrface+=: extensions to library =shrface.el=.
+=shrface-plus=: extensions to library =shrface.el=.
 
 With this package, you can apply the =shrface.el= to even more non-org buffers.
 
@@ -72,28 +72,28 @@ section of [[https://github.com/chenyanming/shrface][shrface.el]] to install and
 
 Then install this package:
 
-** Install shrface+.el
+** Install shrface-plus.el
 Choose one of the following installation methods based on your needs:
 
 *** ues-package
 
 #+BEGIN_SRC emacs-lisp
-(use-package shrface+
+(use-package shrface-plus
   :after shr
   :quelpa
-  (shrface+ :repo "chenyanming/shrface-plus" :fetcher github))
+  (shrface-plus :repo "chenyanming/shrface-plus" :fetcher github))
 #+END_SRC
 
 *** Doom Emacs
 Add the following line to =package.el=
 #+BEGIN_SRC emacs-lisp
-(package! shrface+ :recipe (:host github :repo "chenyanming/shrface-plus"))
+(package! shrface-plus :recipe (:host github :repo "chenyanming/shrface-plus"))
 #+END_SRC
 
 Run =./.emacs.d/bin/doom sync=
 
 *** Spacemacs or other emacs distributions
-Put =shrface+.el= to your load-path. Here is example of ~spacemacs~
+Put =shrface-plus.el= to your load-path. Here is example of ~spacemacs~
 
 #+BEGIN_SRC sh
 git clone git@github.com:chenyanming/shrface-plus.git ~/.emacs.d/private/shrface-plus
@@ -101,15 +101,15 @@ git clone git@github.com:chenyanming/shrface-plus.git ~/.emacs.d/private/shrface
 
 #+BEGIN_SRC emacs-lisp
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/private/shrface-plus"))
-(require 'shrface+)
+(require 'shrface-plus)
 #+END_SRC
 
 * Configuration
 
-** Enable shrface+.el
+** Enable shrface-plus.el
 
 #+BEGIN_SRC emacs-lisp
-(require 'shrface+)
+(require 'shrface-plus)
 #+END_SRC
 
 ** Settings for different major modes
