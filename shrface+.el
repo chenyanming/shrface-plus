@@ -27,7 +27,7 @@
 ;; shrface+: extensions to library `shrface.el'
 ;; Apply org faces to non-org buffers
 ;
-;; Following major modes are supported:
+;; The following major modes are supported:
 ;;
 ;; 1. w3m mode
 ;; 2. info mode
@@ -37,7 +37,7 @@
 
 (require 'shrface)
 
-(defun w3m-fontify-headline ()
+(defun shrface-plus-w3m-headline-fontify ()
   "Fontify bold text in the buffer containing halfdump."
   (goto-char (point-min))
   (while (re-search-forward "^<b>.*</b>$" nil t)
@@ -49,11 +49,11 @@
         (delete-region (match-beginning 0) (match-end 0))
         (w3m-add-face-property start (match-beginning 0) 'shrface-h1-face)))))
 
-(defun shrface-helpful-heading (text)
+(defun shrface-plus-helpful-heading (text)
   "Propertize TEXT as a heading."
   (format "%s\n" (propertize (concat "◉ " text) 'face 'shrface-h2-face)))
 
-(defun shrface-info-mode-fontify ()
+(defun shrface-plus-info-mode-fontify ()
   "Fontify info mode bufffer"
   ;; (face-remap-add-relative 'info-title-1 '(:height nil))
   ;; (face-remap-add-relative 'info-menu-header 'org-title)
@@ -65,12 +65,12 @@
   (face-remap-add-relative 'info-xref-visited 'org-done)
   (face-remap-add-relative 'Info-quoted 'shrface-verbatim))
 
-(defun shrface-helpful-mode-fontify ()
+(defun shrface-plus-helpful-mode-fontify ()
   "Fontify helpful mode bufffer"
   ;; (face-remap-add-relative 'helpful-heading 'org-level-2)
-  (advice-add 'helpful--heading :override 'shrface-helpful-heading))
+  (advice-add 'helpful--heading :override 'shrface-plus-helpful-heading))
 
-(defun shrface-w3m-mode-fontify ()
+(defun shrface-plus-w3m-mode-fontify ()
   "Fontify w3m mode bufffer"
   (face-remap-add-relative 'w3m-header-line-title 'shrface-h1-face)
   (face-remap-add-relative 'w3m-anchor 'shrface-href-face)
@@ -80,12 +80,12 @@
 (defun shrface-plus ()
   "Fontify all supported major mode"
   (interactive)
-  (when (eq major-mode 'w3m-mode)
-    (shrface-w3m-mode-fontify))
-  (when (eq major-mode 'Info-mode)
-    (shrface-info-mode-fontify))
-  (when (eq major-mode 'helpful-mode)
-    (shrface-helpful-mode-fontify)))
+  (cond ((eq major-mode 'w3m-mode)
+         (shrface-plus-w3m-mode-fontify))
+        ((eq major-mode 'Info-mode)
+         (shrface-plus-info-mode-fontify))
+        ((eq major-mode 'helpful-mode)
+         (shrface-plus-helpful-mode-fontify))))
 
 ;; (add-hook 'shrface-mode-hook #'shrface-plus)
 (provide 'shrface+)
