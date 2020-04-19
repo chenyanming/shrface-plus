@@ -88,5 +88,5 @@
          (shrface-plus-helpful-mode-fontify))))
 
 ;; (add-hook 'shrface-mode-hook #'shrface-plus)
-(provide 'shrface+)
+(provide 'shrface-plus)
 ;;; shrface+.el ends here;;;
