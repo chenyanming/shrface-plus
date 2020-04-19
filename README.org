@@ -5,6 +5,10 @@
 
 * Table of Contents :TOC_3:noexport:
 - [[#description][Description]]
+- [[#screenshots][Screenshots]]
+  - [[#w3m][w3m]]
+  - [[#info][Info]]
+  - [[#helpful][helpful]]
 - [[#prerequisites][Prerequisites]]
 - [[#before-the-installation][Before the installation]]
 - [[#installation][Installation]]
@@ -42,6 +46,14 @@ The following major mode are supported at this moment:
      - =imenu=
      - =outline-minor-mode=
      - =org-indent-mode=
+
+* Screenshots
+** w3m
+#+html: <p align="center"><img src="img/w3m.png" width="60%"/></p>
+** Info
+#+html: <p align="center"><img src="img/Info.png" width="60%"/></p>
+** helpful
+#+html: <p align="center"><img src="img/helpful.png" width="60%"/></p>
 
 * Prerequisites
 This module requires =shrface.el=
