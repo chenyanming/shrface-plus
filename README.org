@@ -4,6 +4,7 @@
 #+STARTUP: inlineimages nofold
 
 * Table of Contents :TOC_3:noexport:
+- [[#shrface-plus-is-no-longer-support][shrface-plus is NO LONGER SUPPORT]]
 - [[#description][Description]]
 - [[#screenshots][Screenshots]]
   - [[#w3m][w3m]]
@@ -22,6 +23,15 @@
     - [[#info-mode][Info mode]]
     - [[#helpful-mode][helpful mode]]
     - [[#w3m-mode][w3m mode]]
+
+* shrface-plus is NO LONGER SUPPORT
+
+=shrface-plus= is originally an extension library for =shrface.el= and the project
+target is for any non-org buffers. It does not need =shr= to work, =shr= is only for
+eww/nov.el/mu4e, so I change to a new name - =inherit-org=, for chasing the
+project target: inherit org faces for any non-org buffers.
+
+Please check[[https://github.com/chenyanming/inherit-org][ inherit-org]] instead.
 
 * Description
 =shrface-plus=: extensions to library =shrface.el=.
